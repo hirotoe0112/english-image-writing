@@ -3,8 +3,8 @@ import os
 import streamlit as st
 
 
-openai_api_key = os.getenv("OPENAI_API_KEY") or st.secrets["openai_api_key"]
-client = OpenAI(api_key=openai_api_key)
+api_key = st.sidebar.text_input("OpenAI API Key", type="password")
+client = OpenAI(api_key=api_key)
 
 # 初期化
 if "image_url" not in st.session_state:
