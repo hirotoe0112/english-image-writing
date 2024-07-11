@@ -17,7 +17,7 @@ def get_problem(theme):
     generated = client.images.generate(
         model="dall-e-2",
         prompt=f"{theme}の一場面を写した写真を生成してください。",
-        size="513x512",
+        size="512x512",
         quality="standard",
         n=1,
     )
